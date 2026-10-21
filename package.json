@@ -13,6 +13,11 @@
   "browserslist": [
     "last 2 versions"
   ],
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "package": "gulp bundle"
+  },
   "devDependencies": {
     "@asciidoctor/core": "~2.2",
     "@fontsource/roboto": "~4.5",
