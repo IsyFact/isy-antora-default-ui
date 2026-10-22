@@ -1,14 +1,14 @@
 # IsyFact Antora Default UI
 
-This project is a central repository providing the Antora Default UI for all IsyFact projects.
-Based on the [Antora Default UI project](https://gitlab.com/antora/antora-ui-default) (master, commit 0e38223) it provides source files and tools for building the UI-Bundle distributed as `ui-bundle.zip` which is used by Antora projects for rendering HTML-pages while documentation generation process.
+This project is a central repository providing a customized Antora Default UI for all IsyFact projects.
+Based on the [Antora Default UI project](https://gitlab.com/antora/antora-ui-default) (master, commit 0e38223) it provides source files and tools for building the UI-Bundle distributed as `ui-bundle.zip` which is used by Antora projects for rendering HTML-pages during the documentation generation process.
 
 > **NOTE:** This project **must not** contain any confidential or project specific files like logo, styles etc. (branding).
 
 Main purpose of this project is:
 - **Single Source of Truth** for the UI-Bundle, which can be maintained and tracked at one place
 - **Standardized distribution and integration** of UI-Bundle changes into Antora Documentation projects
-- even **in security sensitive environments**, where network access to publicly available repositories is strictly limited
+- **Solution working also for security sensitive environments**, where network access to publicly available repositories is strictly limited
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ In order to build and preview the UI-Bundle following tools from the Node.js fam
 ## Project Setup
 
 1. Install project dependencies by: `npm install`
-2. Verify installation running `gulp` from local installation:
+2. Verify installation running `gulp` from local installation, e.g:
    ```shell
    $ npx gulp --version
    CLI version: 2.3.0
@@ -36,7 +36,7 @@ In order to build and preview the UI-Bundle following tools from the Node.js fam
    ```
 ## Building the Default UI and UI-Bundle
 
-After successful [project setup](#project-setup) you can build and bundle the Default UI in one go:
+After successful [project setup](#project-setup) you can build and bundle the Default UI in one go with:
 
 `npx gulp bundle`
 
@@ -77,6 +77,8 @@ Assuming `antora-ui/default-ui` as target directory and `https://github.com/IsyF
    git clean -fd antora-ui/default-ui
    ```
 
+> **NOTE on Git**: This integration process leverages standard Git workflows to ensure platform independence and reliability.
+
 ## Update IsyFact Antora Default UI / UI-Bundle
 
 If you are already using the IsyFact Default UI and want to update to a newer version, the steps are similar to [Integrate IsyFact UI-Bundle into Antora Project](#Integrate-IsyFact-UI-Bundle-into-Antora-Project).
@@ -109,6 +111,12 @@ If you are already using the IsyFact Default UI and want to update to a newer ve
    git push v3
    ```
 > **NOTE on Versioning:** New releases are tagged by v1, v2... on the main branch to keep it simple.
+
+## Resources
+
+* [Antora Default UI project](https://gitlab.com/antora/antora-ui-default)
+* [Antora Default UI Documentation](https://docs.antora.org/antora-ui-default/)
+* [Build Tool Gulp](https://gulpjs.com/)
 
 ## Copyright and License
 
